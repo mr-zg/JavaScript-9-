@@ -1,0 +1,265 @@
+<!DOCTYPE html><html><head><title>01-认识JavaScript</title><meta charset='utf-8'><link href='https://dn-maxiang.qbox.me/res-min/themes/marxico.css' rel='stylesheet'><style></style></head><body><div id='preview-contents' class='note-content'>
+                        
+                    
+
+
+
+<h2 id="01-认识javascript">01-认识JavaScript</h2>
+
+<hr>
+
+
+
+<h3 id="一开发工具"><code>一</code>.开发工具</h3>
+
+
+
+<h3 id="二学习方法"><code>二</code>.学习方法</h3>
+
+
+
+<h3 id="三初始javascript"><code>三</code>.初始JavaScript</h3>
+
+<blockquote>
+  <ul><li>JavaScript是一种直译<code>脚本语言</code>,是一种<code>动态类型</code>,<code>弱类型</code>,<code>基于原型</code>的语言</li>
+  <li>前端三层<code>结构层-html</code>,<code>表现层-CSS</code>,<code>行为层-JavaScript</code></li>
+  <li>JavaScript通常用来操作HTML页面,响应用户操作,验证数据等等</li>
+  <li>Java和JavaScript的关系,jQuery和JavaScript的关系</li>
+  <li>JavaScript是<code>布兰登·艾奇</code>在1995年5月份创建</li>
+  <li><code>ECMAScript</code>:语法规则,一个标准,JavaScript的实现;<code>DOM</code>:(一个对象)提供方法让JavaScript来操作html的标签节点;<code>BOM</code>:提供方法,以便于JavaScript操作浏览器</li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="四javascript代码写在哪里"><code>四</code>.JavaScript代码写在哪里?</h3>
+
+<blockquote>
+  <ul><li>写在html页面中.外部引入,写在标签里面 <br>
+  <code>1)</code>html页面中:<code>&lt;script&gt;&lt;/script&gt;</code>标签里面 <br>
+  <code>2)</code> 外部引入:<code>`&lt;script src='url'&gt;&lt;/script&gt;</code> <br>
+  <code>3)</code> 标签中:<code>&lt;html onclick="alert('ni hao shi jie')"&gt;&lt;/html&gt;</code></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="五写javascript需要注意什么"><code>五</code>.写JavaScript需要注意什么?</h3>
+
+<blockquote>
+  <ul><li>严格区分大小写</li>
+  <li>语法字符半角字符</li>
+  <li>完整语句后面用<code>;</code>结束</li>
+  <li>缩进对齐</li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="六弹窗与调试"><code>六</code>.弹窗与调试</h3>
+
+<blockquote>
+  <ul><li><strong>常用调试方法</strong> <br>
+  <code>1)</code> alert(“内容”); <br>
+  <code>2)</code> console.log(“内容”);</li>
+  <li>几种不好看的系统弹窗 <br>
+  <code>1)</code> alert(“你好”); <br>
+  <code>2)</code> confirm(“确定?”); <br>
+  <code>3)</code> prompt(“请输入你的姓名:”);</li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="七获取元素注册事件产生行为"><code>七</code>.获取元素,注册事件,产生行为</h3>
+
+<blockquote>
+  <p><strong>获取的元素.事件 = 反应;</strong></p>
+  
+  <ul><li><p>获取元素(这里元素也叫节点/DOM对象) <br>
+  <code>1)</code> 通过元素ID获取</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line">    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'元素ID名'</span>)
+</div></code></pre>
+  
+  <p><code>2)</code> 注册事件</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line">    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'元素ID名'</span>).onclick
+</div></code></pre>
+  
+  <p><code>3)</code> 反应,行为</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line">    <span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">'元素ID名'</span>).onclick = <span class="hljs-function"><span class="hljs-keyword">function</span>(<span class="hljs-params"></span>)</span>{
+</div><div class="hljs-line">        alert(<span class="hljs-string">"你好!"</span>);
+</div><div class="hljs-line"> }
+</div></code></pre></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="八js注释"><code>八</code>.JS注释</h3>
+
+<blockquote>
+  <ul><li><code>//</code>单行注释</li>
+  <li><code>/* 多行注释 */</code></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="九获取元素的几种常用方式"><code>九</code>.获取元素的几种常用方式</h3>
+
+<blockquote>
+  <ul><li><p><strong>常见元素获取</strong></p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementById() <span class="hljs-comment">//通过ID获取,获取某一个元素,所有浏览器兼容</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementsByClassName() <span class="hljs-comment">//通过class类名获取,获取是一组,不支持IE8及以下</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementsByTagName() <span class="hljs-comment">//通过标签名获取,获取是一组,所有浏览器兼容</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementsByName() <span class="hljs-comment">//通过name获取,获取是一组,很少用,所有浏览器兼容</span>
+</div><div class="hljs-line"><wbr>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.querySelector() <span class="hljs-comment">//通过css选择器获取,获取第一个元素,支持IE8及以上</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.querySelectorAll() <span class="hljs-comment">//通过css选择器获取,获取所有满足这个选择器的一组元素,支持IE8及以上</span>
+</div></code></pre></li>
+  <li><p>特殊元素获取</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line"><span class="hljs-built_in">document</span>.documentElement  <span class="hljs-comment">//HTML标签获取</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.head  <span class="hljs-comment">//head标签获取</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.title  <span class="hljs-comment">//title标签获取</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.body  <span class="hljs-comment">//body标签获取</span>
+</div></code></pre></li>
+  <li><p>操作HTML内容(这不是事件) <br>
+  操作标签元素的HTML内容,就是一个行为</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavasCRIPT hljs"><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"元素ID名"</span>).innerHTML = <span class="hljs-string">"我是通过JS来增加的"</span>;
+</div></code></pre></li>
+  <li><p><strong><code>innerHTML 不解析标签</code></strong></p></li>
+  <li><strong><code>innerText 解析标签</code></strong> <br>
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"wrap"</span>).innerHTML = <span class="hljs-string">"&lt;a href=''&gt;百度&lt;/a&gt;"</span>
+</div><div class="hljs-line"><span class="hljs-built_in">document</span>.getElementById(<span class="hljs-string">"wrap"</span>).innerText = <span class="hljs-string">"&lt;a href=''&gt;谷歌&lt;/a&gt;"</span>
+</div></code></pre></li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="十js-dom0级事件的简单认识"><code>十</code>.JS DOM0级事件的简单认识</h3>
+
+<blockquote>
+  <ul><li>事件</li>
+  <li>方法 / 函数</li>
+  <li>this </li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="十一定义变量"><code>十一</code>.定义变量</h3>
+
+<blockquote>
+  <p><code>关键词 变量名 = 值;</code>   =&gt; 就是把右边的值赋值给左边的变量名,变量名是自己取的</p>
+  
+  <ul><li><strong>变量命名规则</strong> <br>
+  <code>1)</code>严格区分大小写 <br>
+  <code>2)</code>见名之意 <br>
+  <code>3)</code>不能以数字开头 <br>
+  <code>4)</code>不要使用中文变量名 <br>
+  <code>5)</code>不能使用关键字和保留关键字 <br>
+  <code>6)</code> 可以使用数字 , 字母 , _ , $ </li>
+  <li><p><strong><code>ES5定义变量</code></strong>,关键词<code>var</code> <br>
+  在JavaScript中,<code>{}</code>,<code>if</code>,<code>for</code>这些里面的都称之为块级作用域</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-JavaScript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> mood; <span class="hljs-comment">//声明不赋值</span>
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> mood1 = happy; <span class="hljs-comment">//声明再赋值</span>
+</div><div class="hljs-line"><span class="hljs-keyword">var</span> mood1 = sad; <span class="hljs-comment">//同层级多次重复声明同一个变量没有意义</span>
+</div></code></pre>
+  
+  <p>1）可以重复申明变量，而且是合法的，并且是无害 <br>
+  2）同一个变量名可以多次赋值 <br>
+  3）可以在代码块内修改代码块之外声明的变量</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> myVar = <span class="hljs-string">"zhaoge"</span>;
+</div><div class="hljs-line"><span class="hljs-function"><span class="hljs-keyword">function</span> <span class="hljs-title">fn</span>(<span class="hljs-params">str</span>)</span>{
+</div><div class="hljs-line">    <span class="hljs-keyword">return</span> myVar = <span class="hljs-string">"goudan"</span> + str;
+</div><div class="hljs-line">}
+</div><div class="hljs-line">fn(<span class="hljs-string">"dada"</span>);
+</div><div class="hljs-line"><span class="hljs-built_in">console</span>.log(myVar);
+</div></code></pre>
+  
+  <p>4) 在全局范围内都有效</p>
+  
+  <pre class="prettyprint hljs-dark"><code class="language-javascript hljs"><div class="hljs-line"><span class="hljs-keyword">var</span> myVar = []; 
+</div><div class="hljs-line"><span class="hljs-keyword">for</span> (<span class="hljs-keyword">var</span> i = <span class="hljs-number">0</span>; i &lt; <span class="hljs-number">10</span>; i++) { 
+</div><div class="hljs-line">  myVar[i] = <span class="hljs-function"><span class="hljs-keyword">function</span> (<span class="hljs-params"></span>) </span>{ 
+</div><div class="hljs-line">        <span class="hljs-built_in">console</span>.log(i); 
+</div><div class="hljs-line">  }
+</div><div class="hljs-line"> } 
+</div><div class="hljs-line">myVar[<span class="hljs-number">6</span>](); 
+</div></code></pre>
+  
+  <p>5) 存在生命提升(在声明这个变量之前使用这个变量也是有效的) <br>
+  6) <strong>var</strong>声明变量会被提到的三条规则</p>
+  
+  <ul>
+  <li>不要把var语句放在代码块中</li>
+  <li>不要把var语句放在循环体中</li>
+  <li>每个函数都使用单一的var语句</li></ul></li>
+  <li><strong><code>ES6定义变量</code></strong>,关键词<code>let</code>,<code>const</code> <br>
+  <strong>使用let声明变量:</strong></li>
+  </ul>
+  
+  <p><strong>异同:</strong>用法相同,不同在于<code>let</code>声明的变量只在代码块中生效(也就是块级作用域,后面详细的讲)</p>
+  
+  <ul><li>1) 只在<code>let</code>命令所在的代码块内有效</li>
+  <li>2) <code>let</code>声明的变量是定义在块内,但这个变量也可以作用在这个块的子块中</li>
+  <li>3) <code>let</code>声明变量时,不允许相同的作用域名重复声明同一个变量</li>
+  <li>4) 在同一个作用域不能和var声明同一个变量名</li>
+  <li>5) 不存在生命提升,也就是说<code>let</code>声明的变量只有声明了才能使用</li>
+  <li><strong>注意:</strong>就算外层代码块已经用<code>var</code>声明了同一个变量名,在子块里面用<code>let</code>再次声明这个变量名,在这个字块里面也是不能提前使用的.这种现象称之为<strong>暂时性死区(TDZ)</strong></li>
+  <li>5)  用<code>let</code>声明的变量块内和块外相同变量名互不影响 <br>
+  <strong>使用const声明变量(常量):</strong> <br>
+  <code>const</code>声明变量,其实是声明的<code>常量</code>,一旦使用const声明,常量的值就不能改变</li>
+  <li>1)  改变常量值不起作用,重新复制也不会生效</li>
+  <li>2) 和let一样只在自己的块级作用域内有效</li>
+  <li>3) 不可重复声明同一个变量名</li>
+  <li>4) 必须声明就赋值,不能先声明,后面用的时候再去赋值</li>
+  <li>5) 不会有变量提升</li>
+  <li>6) 块外和块内的相同变量名互不影响</li>
+  </ul>
+</blockquote>
+
+
+
+<h3 id="十二常见事件记住"><code>十二</code>.常见事件(记住)</h3>
+
+<blockquote>
+  <p>了解一些基础事件</p>
+  
+  <ul><li><strong><code>鼠标事件</code></strong></li>
+  </ul>
+  
+  <table><tbody><tr style="font-weight:bold">  <td align="left">事件</td>  <td align="right">事件名</td></tr><tr>  <td align="left">onclick</td>  <td align="right">左键单击</td></tr><tr>  <td align="left">ondblclick</td>  <td align="right">左键双击</td></tr><tr>  <td align="left">onmouseover  /  onmouseenter(推荐使用)</td>  <td align="right">鼠标移入</td></tr><tr>  <td align="left">onmouseout / onmouseleave(推荐使用)</td>  <td align="right">鼠标移除</td></tr><tr>  <td align="left">onmousedown</td>  <td align="right">鼠标按下</td></tr><tr>  <td align="left">onmousemove</td>  <td align="right">鼠标移动</td></tr><tr>  <td align="left">onmouseup</td>  <td align="right">鼠标抬起(鼠标松开)</td></tr><tr>  <td align="left">onmousetextmenu</td>  <td align="right">右键单击</td></tr></tbody></table>
+  
+  <ul><li><strong><code>键盘事件</code></strong></li>
+  </ul>
+  
+  <table><tbody><tr style="font-weight:bold">  <td align="left">事件</td>  <td align="right">事件名</td></tr><tr>  <td align="left">onkeydown / onkeypress</td>  <td align="right">按键按下</td></tr><tr>  <td align="left">onkeyup</td>  <td align="right">按键抬起</td></tr></tbody></table>
+  
+  <ul><li><strong><code>系统事件</code></strong></li>
+  </ul>
+  
+  <table><tbody><tr style="font-weight:bold">  <td align="left">事件</td>  <td align="right">事件名</td></tr><tr>  <td align="left">onload</td>  <td align="right">加载完成之后</td></tr><tr>  <td align="left">onerror</td>  <td align="right">加载出错后</td></tr><tr>  <td align="left">onresize</td>  <td align="right">窗口调整大小时</td></tr><tr>  <td align="left">onscroll</td>  <td align="right">滚动时</td></tr></tbody></table>
+  
+  <ul><li><strong><code>表单事件</code></strong></li>
+  </ul>
+  
+  <table><tbody><tr style="font-weight:bold">  <td align="left">事件</td>  <td align="right">事件名</td></tr><tr>  <td align="left">onfocus</td>  <td align="right">获取焦点后</td></tr><tr>  <td align="left">onblur</td>  <td align="right">失去焦点后</td></tr><tr>  <td align="left">onchange</td>  <td align="right">改变内容后</td></tr><tr>  <td align="left">onreset</td>  <td align="right">重置后</td></tr><tr>  <td align="left">onselect</td>  <td align="right">选择后</td></tr><tr>  <td align="left">onsubmit</td>  <td align="right">提交后</td></tr></tbody></table>
+</blockquote>
+
+
+
+<h3 id="十三作业"><code>十三</code>.作业</h3>
+
+<blockquote>
+  <p>操作两个盒子的内容</p>
+</blockquote></div></body></html>
